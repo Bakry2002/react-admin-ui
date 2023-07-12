@@ -11,6 +11,8 @@ import Menu from './components/menu/Menu';
 
 //? css 
 import './styles/global.scss';
+import UserDetail from "./pages/userDetail/UserDetail";
+import ProductDetail from "./pages/productDetail/ProductDetail";
 
 const Layout = () => {
   return (
@@ -38,6 +40,8 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/users", element: <Users /> },
       { path: "/products", element: <Products /> },
+      { path: "/users/:id", element: <UserDetail /> },
+      { path: "/products/:id", element: <ProductDetail /> },
     ],
   }
 ]);

@@ -1,6 +1,11 @@
+@import '../../styles/responsive.scss';
 .topBox {
     h1 {
         margin-bottom: 20px;
+
+        @include xxl {
+            font-size: 24px;
+        }
     }
 
     .list {
@@ -20,6 +25,13 @@
                     border-radius: 50%;
                     -o-object-fit: cover;
                     object-fit: cover;
+
+                    @include xxl {
+                        display: none;
+                    }
+                    @include lg {
+                        display: block;
+                    }
                 }
                 .userText {
                     display: flex;
@@ -32,6 +44,14 @@
                     }
                     .email {
                         font-size: 12px;
+
+                        @include xxl {
+                                display: none;
+                            }
+                        
+                            @include lg {
+                                display: block;
+                            }
                     }
                 }
             }
